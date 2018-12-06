@@ -1,0 +1,59 @@
+{
+  "model": {
+    "min_input_size": 288,
+    "max_input_size": 448,
+    "anchors": [
+      48,
+      35,
+      64,
+      21,
+      66,
+      25,
+      67,
+      23,
+      68,
+      28,
+      73,
+      55,
+      78,
+      27,
+      83,
+      31,
+      87,
+      27
+    ],
+    "labels": [
+      "plate"
+    ]
+  },
+  "train": {
+    "train_image_folder": "/Users/kevin/Desktop/DS/cctv+parking/train/images/",
+    "train_annot_folder": "/Users/kevin/Desktop/DS/cctv+parking/train/annotations/",
+    "cache_name": "plate_train.pkl",
+    "train_times": 8,
+    "batch_size": 16,
+    "learning_rate": 1e-4,
+    "nb_epochs": 100,
+    "warmup_epochs": 3,
+    "ignore_thresh": 0.5,
+    "gpus": "0,1",
+    "grid_scales": [
+      1,
+      1,
+      1
+    ],
+    "obj_scale": 5,
+    "noobj_scale": 1,
+    "xywh_scale": 1,
+    "class_scale": 1,
+    "tensorboard_dir": "logs",
+    "saved_weights_name": "",
+    "debug": true
+  },
+  "valid": {
+    "valid_image_folder": "/Users/kevin/Desktop/DS/cctv+parking/validation/images/",
+    "valid_annot_folder": "/Users/kevin/Desktop/DS/cctv+parking/validation/annotations/",
+    "cache_name": "plate_validation.pkl",
+    "valid_times": 1
+  }
+}
